@@ -34,7 +34,7 @@ public class HelloController {
     }
 
     @RequestMapping(value = "hello2",method = RequestMethod.GET)
-    public User hello2(@RequestParam String name, @RequestHeader Integer age) {
+    public User hello2(@RequestParam String name, @RequestParam Integer age) {
         return new User(name,age);
     }
 

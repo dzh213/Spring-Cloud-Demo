@@ -1,17 +1,16 @@
-package com.example.eureka.client.model;
+package com.example.cunsumer.feign.model;
 
 public class User {
     private String name;
     private Integer age;
 
+    //必须要有无参的构造函数
     public User(){}
-    public User(String name,Integer age) {
+    public User(String name, Integer age) {
         this.name = name;
         this.age = age;
     }
-    public User(String name) {
-        this.name = name;
-    }
+
 
     public String getName() {
         return name;
@@ -27,5 +26,13 @@ public class User {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
